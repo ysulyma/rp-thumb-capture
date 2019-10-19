@@ -1,0 +1,36 @@
+{
+  "name": "rp-thumb-capture",
+  "version": "1.0.0",
+  "description": "Plugin+browser extension for recording thumbnails in ractive-player",
+  "main": "src/thumb-capture.tsx",
+  "files": [
+    "src/thumb-capture.tsx", "src/polyfills.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ysulyma/rp-thumb-capture.git"
+  },
+  "author": "Yuri Sulyma <yuri@lmqm.xyz>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ysulyma/rp-thumb-capture/issues"
+  },
+  "homepage": "https://github.com/ysulyma/rp-thumb-capture#readme",
+  "devDependencies": {
+    "@types/chrome": "0.0.91",
+    "@types/firefox-webext-browser": "^70.0.1",
+    "@types/react": "^16.9.9",
+    "@typescript-eslint/eslint-plugin": "^2.4.0",
+    "@typescript-eslint/parser": "^2.4.0",
+    "eslint": "^6.5.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^2.1.2",
+    "react": "^16.10.2",
+    "ts-loader": "^6.2.0",
+    "typescript": "^3.6.4",
+    "webextension-polyfill": "^0.5.0"
+  },
+  "peerDependencies": {
+    "ractive-player": "^1.0.1"
+  }
+}
