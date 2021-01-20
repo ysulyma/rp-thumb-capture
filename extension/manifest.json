@@ -18,14 +18,14 @@
     "default_popup": "popup.html"
   },
   "externally_connectable": {
-    "matches": ["*://lmqm.dev/*"]
+    "matches": ["*://YOUR_DOMAIN/*"]
   },
   "permissions": [
     "activeTab",
     "declarativeContent",
     "tabs",
     "tabCapture",
-    "http://lmqm.dev/*",
-    "https://lmqm.dev/*"
+    "http://YOUR_DOMAIN/*",
+    "https://YOUR_DOMAIN/*"
   ]
 }

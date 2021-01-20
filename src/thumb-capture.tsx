@@ -1,10 +1,10 @@
 /// <reference types="chrome"/>
 import * as React from "react";
-import {useCallback, useContext, useEffect, useRef, useState} from "react";
+import {useCallback, useEffect, useRef, useState} from "react";
 
 import {requestFullScreen, exitFullScreen, isFullScreen} from "./polyfills";
 
-import {Player, Utils, Plugin, HookFunction, HookMap} from "ractive-player";
+import {Utils, usePlayer} from "ractive-player";
 const {waitFor} = Utils.misc;
 const sleep = Utils.misc.wait;
 
@@ -22,15 +22,10 @@ interface ApiReturn {
 }
 
 interface Api {
-  captureTab: Function;
+  captureTab: () => {};
 }
 
 type Message = ApiDefinition | ApiReturn;
-
-interface State {
-  paneOpen: boolean;
-  sheets: string[];
-}
 
 const THUMB_OPTIONS = {
   cols: 5,
@@ -84,14 +79,8 @@ const css = `#rp-thumb-capture {
   display: block;
 }`;
 
-export default {
-  setup(hook: HookFunction<keyof HookMap>) {
-    hook("controls", () => <ThumbCapture key="rp-thumb-capture"/>);
-  }
-} as Plugin;
-
-function ThumbCapture() {
-  const player = useContext(Player.Context);
+export default function ThumbCapture() {
+  const player = usePlayer();
   const [paneOpen, setPaneOpen] = useState(false);
   const [sheets, setSheets] = useState<string[]>([]);
   const extensionId = useRef<string>();
