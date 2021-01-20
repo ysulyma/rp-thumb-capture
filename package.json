@@ -5,7 +5,8 @@
   "main": "rp-thumb-capture.js",
   "files": [
     "src/thumb-capture.tsx",
-    "src/polyfills.ts"
+    "src/polyfills.ts",
+    "rp-thumb-capture.min.js"
   ],
   "repository": {
     "type": "git",
