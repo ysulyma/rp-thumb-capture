@@ -23,7 +23,7 @@ const controls = (<>
   </div>
 </>);
 
-<Player plugins={[ThumbCapture]} script={script}>
+<Player controls={controls} script={script}>
 ```
 
 1. Click on the plugin icon first.
